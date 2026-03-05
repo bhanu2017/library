@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Library Dashboard</title>
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<h1 id="dashboardTitle">📚 Library Dashboard</h1>
+
+<div>
+<button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+<button onclick="logout()">Logout</button>
+</div>
+
+</header>
+
+<div class="dashboard">
+
+<div class="stats">
+
+<div class="card">
+<h2 id="totalBooks">0</h2>
+<p>Total Books</p>
+</div>
+
+<div class="card">
+<h2 id="issuedBooks">0</h2>
+<p>Issued Books</p>
+</div>
+
+</div>
+
+<div class="controls">
+
+<input type="text" id="search" placeholder="Search books..." onkeyup="searchBook()">
+
+<button id="addBookBtn" onclick="openForm()">+ Add Book</button>
+
+</div>
+
+<div id="book-container"></div>
+
+</div>
+
+<div id="formPopup" class="popup">
+
+<h2>Add Book</h2>
+
+<input id="title" placeholder="Book Title">
+<input id="author" placeholder="Author">
+<input id="image" placeholder="Image URL">
+<input id="category" placeholder="Category">
+
+<button onclick="addBook()">Save</button> <button onclick="closeForm()">Cancel</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

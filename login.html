@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Library Login</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="login-body">
+
+<div class="login-container">
+
+<div class="login-card">
+
+<h1>📚 Library Login</h1>
+
+<p>Select your role</p>
+
+<button onclick="login('librarian')" class="btn librarian">
+Librarian
+</button>
+
+<button onclick="login('student')" class="btn student">
+Student
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function login(role){
+
+localStorage.setItem("role",role)
+
+window.location.href="index.html"
+
+}
+
+</script>
+
+</body>
+
+</html>
